@@ -650,76 +650,107 @@ Câu 1:  100,000 VNĐ
 
 ## 7. Roadmap Phát Triển
 
-### Phase 1: MVP (Minimum Viable Product) - 2-3 tuần
-**Mục tiêu**: Game cơ bản có thể chơi được
+### 🎯 Strategy: Web-First Approach
+
+**Lý do:**
+- ✅ Full control, không phụ thuộc platform
+- ✅ Dễ test và iterate
+- ✅ SEO tốt, organic traffic
+- ✅ Làm nền tảng để port sang platform khác
+
+---
+
+### Phase 1: MVP Web Version (Minimum Viable Product) - 3-4 tuần
+**Mục tiêu**: Web game cơ bản có thể chơi được
 
 - [ ] **Frontend Core**
+  - [ ] Setup React/Vue.js project
   - [ ] Giao diện cơ bản (Home, Game, Result)
   - [ ] Logic game cơ bản (15 câu hỏi, 4 đáp án)
-  - [ ] 2 quyền trợ giúp cơ bản: 50:50, Time Freeze
-  - [ ] Responsive design cơ bản
-  
-- [ ] **Content**
-  - [ ] 50 câu hỏi mẫu (manual)
+  - [ ] 3 quyền trợ giúp miễn phí: 50:50, Time Freeze, Swap Question
+  - [ ] Responsive design (mobile + desktop)
   - [ ] Âm thanh cơ bản
   
-- [ ] **Data**
+- [ ] **Content**
+  - [ ] 100 câu hỏi manual (đủ cho testing)
+  - [ ] Phân loại theo độ khó (easy/medium/hard)
+  - [ ] 10 categories
+  
+- [ ] **Data Storage**
   - [ ] LocalStorage để lưu high score
   - [ ] Settings cơ bản
 
-**Deliverable**: Game đơn giản có thể chơi offline
+**Deliverable**: Game web đơn giản có thể chơi offline
 
 ---
 
-### Phase 2: Enhanced Features + AI Integration - 3-4 tuần
-**Mục tiêu**: Thêm tính năng nâng cao và AI cơ bản
+### Phase 2: Backend + AI Integration - 4-5 tuần
+**Mục tiêu**: Thêm backend và AI features
 
-- [ ] **Game Features**
-  - [ ] Thêm quyền trợ giúp: Swap Question
-  - [ ] Bảng xếp hạng local
-  - [ ] Animation mượt mà
-  - [ ] 200+ câu hỏi manual
-  - [ ] Hệ thống thời gian đếm ngược (cho Time Freeze)
+- [ ] **Backend Setup (Django)**
+  - [ ] Django project setup
+  - [ ] MySQL database
+  - [ ] User authentication (register/login)
+  - [ ] Django Admin setup
+  - [ ] REST API endpoints
   
 - [ ] **AI Features - Basic**
   - [ ] Tích hợp Gemini API
-  - [ ] AI Question Generator (chế độ AI)
-  - [ ] Chế độ Hybrid (mix AI + manual questions)
+  - [ ] AI Question Generator
   - [ ] AI Voice Narrator (10 giọng miễn phí)
-  - [ ] Text-to-Speech integration
+  - [ ] VieNeu-TTS integration
   
-- [ ] **Backend Setup**
-  - [ ] Node.js + Express server
-  - [ ] PostgreSQL database
-  - [ ] User authentication (register/login)
-  - [ ] Basic API endpoints
-  - [ ] Payment gateway integration (MoMo/ZaloPay/VNPay)
-  - [ ] Shop system (AI Hint packages)
+- [ ] **Game Features**
+  - [ ] 300+ câu hỏi manual
+  - [ ] Bảng xếp hạng local
+  - [ ] Animation mượt mà
+  - [ ] Hệ thống thời gian đếm ngược
 
-**Deliverable**: Game với AI tạo câu hỏi tự động + Shop system
+**Deliverable**: Game web với backend + AI tạo câu hỏi
 
 ---
 
-### Phase 3: Advanced AI + PvP - 4-5 tuần
-**Mục tiêu**: PvP mode và AI nâng cao
+### Phase 3: Monetization + Premium Features - 3-4 tuần
+**Mục tiêu**: Shop system và premium features
 
-- [ ] **AI Features - Advanced**
-  - [ ] AI Hint optimization (cải thiện độ chính xác)
-  - [ ] AI Chat Companion (beta)
-  - [ ] AI difficulty adjustment (điều chỉnh độ khó tự động)
-  - [ ] Premium Voices (MC Lại Văn Sâm, Giáo Sư Xoay, etc.)
-  - [ ] Voice cloning quality improvement
+- [ ] **Shop System**
+  - [ ] Payment gateway integration (MoMo/ZaloPay/VNPay)
+  - [ ] AI Hint packages (Basic/Pro/VIP)
+  - [ ] Premium Voices (MC Lại Văn Sâm, Giáo Sư Xoay)
+  - [ ] Purchase history
+  - [ ] Credits management
   
+- [ ] **Premium Features**
+  - [ ] AI Hint (premium)
+  - [ ] Premium voice narrator
+  - [ ] AI Generated Questions mode
+  - [ ] VIP subscription
+  
+- [ ] **Admin Panel**
+  - [ ] Django Admin customization
+  - [ ] Question management
+  - [ ] User management
+  - [ ] Transaction management
+  - [ ] Analytics dashboard
+
+**Deliverable**: Game web hoàn chỉnh với monetization
+
+---
+
+### Phase 4: PvP + Ranking System - 4-5 tuần
+**Mục tiêu**: Multiplayer và competitive features
+
 - [ ] **PvP Mode**
-  - [ ] WebSocket server setup
-  - [ ] Real-time PvP (1v1)
-  - [ ] Async PvP (turn-based)
+  - [ ] Django Channels setup
+  - [ ] WebSocket real-time
   - [ ] Matchmaking system
+  - [ ] 1v1 gameplay
   
 - [ ] **Ranking System**
   - [ ] ELO rating calculation
   - [ ] Hệ thống hạng (Đồng → Huyền Thoại)
   - [ ] Global leaderboard (all-time)
+  - [ ] Redis caching
   
 - [ ] **User Profile**
   - [ ] Profile page với stats
@@ -727,26 +758,14 @@ Câu 1:  100,000 VNĐ
   - [ ] Badges & Titles
   - [ ] Avatar upload
 
-**Deliverable**: Game multiplayer với ranking system hoàn chỉnh
+**Deliverable**: Game multiplayer với ranking hoàn chỉnh
 
 ---
 
-### Phase 4: Polish + Advanced Features - 3-4 tuần
-**Mục tiêu**: Hoàn thiện và tối ưu
+### Phase 5: Polish + Optimization - 2-3 tuần
+**Mục tiêu**: Hoàn thiện và tối ưu web version
 
-- [ ] **Advanced Features**
-  - [ ] Tournament mode (16/32/64 người)
-  - [ ] Friends system
-  - [ ] Challenge friends
-  - [ ] Chia sẻ kết quả lên mạng xã hội
-  
-- [ ] **AI Enhancements**
-  - [ ] AI Chat Companion (full version)
-  - [ ] AI giải thích đáp án
-  - [ ] AI phân tích điểm mạnh/yếu của người chơi
-  - [ ] Personalized question recommendations
-  
-- [ ] **Performance & Optimization**
+- [ ] **Performance Optimization**
   - [ ] Redis caching
   - [ ] CDN setup
   - [ ] Database optimization
@@ -757,60 +776,92 @@ Câu 1:  100,000 VNĐ
   - [ ] Premium UI/UX
   - [ ] Advanced animations
   - [ ] Sound effects đầy đủ
-  - [ ] Mobile app (PWA)
+  - [ ] PWA (Progressive Web App)
+  - [ ] SEO optimization
+  
+- [ ] **Testing**
+  - [ ] Unit tests
+  - [ ] Integration tests
+  - [ ] User acceptance testing
+  - [ ] Bug fixes
 
-**Deliverable**: Game production-ready với tất cả tính năng
+**Deliverable**: Web version production-ready
 
 ---
 
-### Phase 5: Monetization & Growth (Optional) - Ongoing
-**Mục tiêu**: Tối ưu doanh thu
+### Phase 6: Platform Deployment (Optional) - Ongoing
+**Mục tiêu**: Port sang các platform khác
 
-- [ ] **Monetization**
-  - [ ] AI Hint packages (chính) 💎
-    - [ ] Gói Basic: 10,000 VNĐ
-    - [ ] Gói Pro: 30,000 VNĐ
-    - [ ] Gói VIP: 50,000 VNĐ/tháng
-  - [ ] Premium Voices 🎙️
-    - [ ] MC Lại Văn Sâm: 50,000 VNĐ/tháng
-    - [ ] Giáo Sư Xoay: 50,000 VNĐ/tháng
-    - [ ] MC Phan Đăng: 30,000 VNĐ/tháng
-  - [ ] VIP All-in-One: 100,000 VNĐ/tháng
-  - [ ] AI Generated Questions (VIP only)
-  - [ ] Quảng cáo (cho free users, tắt được khi mua VIP)
-  - [ ] Tournament entry fees (tùy chọn)
-  - [ ] Cosmetics (avatars, badges, themes)
-  
-- [ ] **Growth Features**
-  - [ ] Referral system (tặng 1 lượt AI Hint khi mời bạn)
-  - [ ] Daily rewards (login hàng ngày)
-  - [ ] Free AI Hint mỗi ngày (1 lượt)
-  - [ ] Seasonal events
-  - [ ] Special tournaments
-  - [ ] Influencer partnerships
-  
-- [ ] **Analytics & Optimization**
-  - [ ] Google Analytics
-  - [ ] Payment conversion tracking
-  - [ ] A/B testing (giá gói, UI shop)
-  - [ ] User behavior analysis
-  - [ ] Churn rate monitoring
+#### 6.1 Facebook Instant Games (Month 1-2)
+- [ ] Facebook SDK integration
+- [ ] Optimize bundle size (< 5MB)
+- [ ] Facebook-specific features (share, leaderboard)
+- [ ] Monetization setup (FB Ads, IAP)
+- [ ] Submit for review
+- [ ] Launch campaign
 
-**Deliverable**: Sustainable revenue stream từ AI Hint premium
+#### 6.2 Zalo Mini Game (Month 2-3)
+- [ ] Zalo SDK integration
+- [ ] ZaloPay payment integration
+- [ ] Vietnamese localization
+- [ ] Submit to Zalo
+- [ ] Marketing campaign
+
+#### 6.3 Cross-Platform Optimization
+- [ ] Sync user data across platforms
+- [ ] Unified leaderboard
+- [ ] Analytics tracking
+- [ ] A/B testing
+
+**Deliverable**: Game available trên multiple platforms
 
 ---
 
 ### Timeline Summary
 ```
-Phase 1 (MVP):              ████████░░░░░░░░░░░░  (2-3 tuần)
-Phase 2 (AI Basic):         ░░░░░░░░██████░░░░░░  (3-4 tuần)
-Phase 3 (PvP + Ranking):    ░░░░░░░░░░░░░░████░░  (4-5 tuần)
-Phase 4 (Polish):           ░░░░░░░░░░░░░░░░░░██  (3-4 tuần)
-─────────────────────────────────────────────────
-Total:                      12-16 tuần (~3-4 tháng)
+Phase 1 (MVP Web):          ████████░░░░░░░░░░░░░░░░  (3-4 tuần)
+Phase 2 (Backend + AI):     ░░░░░░░░██████░░░░░░░░░░  (4-5 tuần)
+Phase 3 (Monetization):     ░░░░░░░░░░░░░░████░░░░░░  (3-4 tuần)
+Phase 4 (PvP + Ranking):    ░░░░░░░░░░░░░░░░░░████░░  (4-5 tuần)
+Phase 5 (Polish):           ░░░░░░░░░░░░░░░░░░░░░░██  (2-3 tuần)
+─────────────────────────────────────────────────────
+Total Web Version:          16-21 tuần (~4-5 tháng)
+Phase 6 (Platforms):        +2-3 tháng (optional)
 ```
 
-### Resource Requirements
+### 🎯 Milestone Checklist
+
+**✅ Milestone 1: Playable Game** (End of Phase 1)
+- Game có thể chơi được
+- 100 câu hỏi
+- Basic UI/UX
+
+**✅ Milestone 2: Full-Featured Game** (End of Phase 2)
+- Backend hoàn chỉnh
+- AI features
+- 300+ câu hỏi
+
+**✅ Milestone 3: Monetization Ready** (End of Phase 3)
+- Shop system
+- Payment integration
+- Premium features
+
+**✅ Milestone 4: Competitive Game** (End of Phase 4)
+- PvP mode
+- Ranking system
+- Leaderboard
+
+**✅ Milestone 5: Production Launch** (End of Phase 5)
+- Optimized & polished
+- SEO ready
+- PWA enabled
+
+**✅ Milestone 6: Multi-Platform** (End of Phase 6)
+- Facebook Instant Games
+- Zalo Mini Game
+- Cross-platform sync
+
+---### Resource Requirements
 
 **Development Team** (Recommended)
 - 1 Frontend Developer
