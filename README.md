@@ -3,6 +3,12 @@
 
 Vietnamese quiz game với AI features, PvP mode, và monetization system.
 
+## Spec
+- https://github.com/kratosvn/brain_arena/blob/main/GAME_SPEC.md
+## Technical docs
+- https://github.com/kratosvn/brain_arena/blob/main/TECHNICAL_DOCS.md
+
+
 ## 🚀 Quick Start
 
 ### Prerequisites
