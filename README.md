@@ -68,7 +68,6 @@ python manage.py createsuperuser
 # Run development server
 python manage.py runserver
 ```
-
 Backend runs at: **http://localhost:8000**  
 Django Admin: **http://localhost:8000/admin**
 
@@ -143,7 +142,6 @@ Frontend runs at: **http://localhost:5173**
 # Run server
 python manage.py runserver
 
-# Create migrations
 python manage.py makemigrations
 
 # Apply migrations
